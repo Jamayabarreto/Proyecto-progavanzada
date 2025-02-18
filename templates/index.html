@@ -3,23 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Chicas Mágicas</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <h1>Lista de Chicas Mágicas</h1>
     <ul>
         {% for girl in girls %}
         <li>
-            <img src="{{ girl.photo_url }}" alt="Foto de {{ girl.name }}" width="100" height="100"><br>
-            <strong>Nombre:</strong> {{ girl.name }}<br>
+            <a href="/magical_girls/{{ girl.id }}">{{ girl.name }}</a><br>
             <strong>Edad:</strong> {{ girl.age }}<br>
             <strong>Ciudad:</strong> {{ girl.city }}<br>
             <strong>Estado:</strong> {{ girl.status }}<br>
             <strong>Fecha de Contrato:</strong> {{ girl.contract_date }}<br>
             <strong>Raza:</strong> {{ girl.race }}<br>
         </li>
-        <hr>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+        <hr
