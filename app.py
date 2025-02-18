@@ -30,7 +30,7 @@ def create_magical_girl():
         status=data['status'],
         contract_date=datetime.strptime(data['contract_date'], '%Y-%m-%d'),
         race=data['race'],
-        photo_url=data.get('photo_url')  # Manejar el nuevo campo
+        photo_url=data.get('photo_url')  # Incluir el campo photo_url
     )
     db.session.add(new_girl)
     db.session.commit()
@@ -53,7 +53,7 @@ def update_magical_girl(id):
     data = request.get_json()
     girl = MagicalGirl.query.get_or_404(id)
     girl.race = data.get('race', girl.race)
-    girl.photo_url = data.get('photo_url', girl.photo_url)  # Actualizar el campo de la foto
+    girl.photo_url = data.get('photo_url', girl.photo_url)  # Actualizar el campo photo_url
     db.session.commit()
     return jsonify({'message': 'Chica mágica actualizada'}), 200
 
