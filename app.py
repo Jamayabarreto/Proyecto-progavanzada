@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify, render_template
-from flask_migrate import Migrate, upgrade
 from models import db, MagicalGirl
 from datetime import datetime
 
@@ -8,17 +7,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///magical_girls.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
-migrate = Migrate(app, db)  # Configurar Flask-Migrate
 
 with app.app_context():
     db.create_all()
-
-    # Aplicar las migraciones
-    try:
-        upgrade()
-        print("Migración aplicada correctamente")
-    except Exception as e:
-        print(f"Error al aplicar la migración: {e}")
 
 @app.route('/')
 def index():
@@ -39,7 +30,7 @@ def create_magical_girl():
         status=data['status'],
         contract_date=datetime.strptime(data['contract_date'], '%Y-%m-%d'),
         race=data['race'],
-        photo_url=data.get('photo_url')
+        photo_url=data.get('photo_url')  # Manejar el nuevo campo
     )
     db.session.add(new_girl)
     db.session.commit()
@@ -62,7 +53,7 @@ def update_magical_girl(id):
     data = request.get_json()
     girl = MagicalGirl.query.get_or_404(id)
     girl.race = data.get('race', girl.race)
-    girl.photo_url = data.get('photo_url', girl.photo_url)
+    girl.photo_url = data.get('photo_url', girl.photo_url)  # Actualizar el campo de la foto
     db.session.commit()
     return jsonify({'message': 'Chica mágica actualizada'}), 200
 
