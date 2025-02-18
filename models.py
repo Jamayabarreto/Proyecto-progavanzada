@@ -10,7 +10,8 @@ class MagicalGirl(db.Model):
     status = db.Column(db.String(100), nullable=False)
     contract_date = db.Column(db.Date, nullable=False)
     race = db.Column(db.String(100), nullable=False)
-    photo_url = db.Column(db.String(200), nullable=True)  # Nuevo campo para la URL de la foto
+    photo_url = db.Column(db.String(200), nullable=True)
+    state_history = db.relationship('StateHistory', backref='magical_girl', lazy=True)
 
     def to_dict(self):
         return {
@@ -23,3 +24,9 @@ class MagicalGirl(db.Model):
             'race': self.race,
             'photo_url': self.photo_url
         }
+
+class StateHistory(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    girl_id = db.Column(db.Integer, db.ForeignKey('magical_girl.id'), nullable=False)
+    status = db.Column(db.String(100), nullable=False)
+    change_date = db.Column(db.Date, nullable=False)
