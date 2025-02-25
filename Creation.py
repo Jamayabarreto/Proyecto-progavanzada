@@ -70,7 +70,8 @@ with app.app_context():
             print(f"Chica mágica {girl_data['name']} ya existe en la base de datos")
 
 
-'''from flask import Flask
+'''
+from flask import Flask
 from models import db, MagicalGirl
 
 app = Flask(__name__)
@@ -89,4 +90,5 @@ with app.app_context():
         db.session.commit()
         print(f"Raza de {girl.name} actualizada a {new_race}")
     else:
-        print(f"No se encontró una chica mágica con ID {girl_id}")'''
+        print(f"No se encontró una chica mágica con ID {girl_id}")
+'''
