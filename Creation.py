@@ -13,40 +13,40 @@ with app.app_context():
     # Lista de chicas mágicas a crear
     girls = [
         {
-            "name": "Erling Haaland",
-            "age": 24,
-            "city": "Oslo",
+            "name": "Cole Palmer",
+            "age": 22,
+            "city": "Manchester",
             "status": "activa",
-            "contract_date": "2024-06-11",
-            "race": "Humana",
-            "photo_url": "https://icdn.benchwarmers.ie/wp-content/uploads/2022/10/Erling-Haaland.jpeg"
+            "contract_date": "2025-01-15",
+            "race": "Leon",
+            "photo_url": "https://uk1.sportal365images.com/process/smp-image-api/livescore.com/23012024/b4a32bbf-2e73-4f49-8a49-1dd5d57b7b75.jpg"
         },
         {
-            "name": "Daniel Muñoz",
+            "name": "Bryan Mbeumo",
             "age": 27,
-            "city": "Medellin",
-            "status": "activa",
-            "contract_date": "2021-05-21",
-            "race": "Aguila",
-            "photo_url": "https://cdn1.wearepalace.uk/uploads/28/2024/05/GettyImages-2151201013-scaled.jpg"
+            "city": "Avallon",
+            "status": "rescatada por la Ley de los Ciclos",
+            "contract_date": "2021-08-21",
+            "race": "Abeja",
+            "photo_url": "https://static01.nyt.com/athletic/uploads/wp/2023/12/07093935/bryan-mbeumo-scaled-e1701962367529.jpeg"
         },
         {
-            "name": "ChipiChipi",
-            "age": 24,
-            "city": "Estocolmo",
+            "name": "Matheus Cunha",
+            "age": 25,
+            "city": "João Pessoa",
             "status": "activa",
-            "contract_date": "2024-12-15",
-            "race": "Humana",
-            "photo_url": "https://static0.givemesportimages.com/wordpress/wp-content/uploads/2024/02/newcastle-united-striker-alexander-isak-1.jpg"
+            "contract_date": "2024-06-02",
+            "race": "Lobo",
+            "photo_url": "https://icdn.caughtoffside.com/wp-content/uploads/2025/02/tottenham-wolves-matheus-cunha-1536x1078.jpg"
         },
         {
-            "name": "Chris Wood",
-            "age": 32,
-            "city": "Aukland",
-            "status": "activa",
-            "contract_date": "2017-03-01",
-            "race": "Carpintero",
-            "photo_url": "https://th.bing.com/th/id/OIF.xbDtYevDEzMLFGtM7qUtXg?w=302&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7"
+            "name": "Ollie Watkins",
+            "age": 26,
+            "city": "Exeter",
+            "status": "Desaparecida",
+            "contract_date": "2020-04-11",
+            "race": "Leon",
+            "photo_url": "https://mercatofootanglais.com/wp-content/uploads/2023/04/ollie-watkins-scaled.jpg"
         }
     ]
 

@@ -2,21 +2,31 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Chicas Mágicas</title>
+    <title>Lista de Chicas Mágicas</title>
 </head>
 <body>
     <h1>Lista de Chicas Mágicas</h1>
+    <form method="get" action="/magical_girls/state">
+        <label for="estado">Filtrar por estado:</label>
+        <select id="estado" name="estado">
+            <option value="">Todas</option>
+            <option value="activa">Activa</option>
+            <option value="desaparecida">Desaparecida</option>
+            <option value="rescatada">Rescatada</option>
+        </select>
+        <button type="submit">Filtrar</button>
+    </form>
     <ul>
         {% for girl in girls %}
         <li>
-            <a href="/magical_girls/{{ girl.id }}">{{ girl.name }}</a><br>
-            <strong>Edad:</strong> {{ girl.age }}<br>
-            <strong>Ciudad:</strong> {{ girl.city }}<br>
-            <strong>Estado:</strong> {{ girl.status }}<br>
-            <strong>Fecha de Contrato:</strong> {{ girl.contract_date }}<br>
-            <strong>Raza:</strong> {{ girl.race }}<br>
+            <strong>{{ girl.name }}</strong><br>
+            Edad: {{ girl.age }}<br>
+            Ciudad: {{ girl.city }}<br>
+            Estado: {{ girl.status }}<br>
+            Fecha de Contrato: {{ girl.contract_date }}<br>
+            Raza: {{ girl.race }}<br>
+            <img src="{{ girl.photo_url }}" alt="Foto de {{ girl.name }}" width="100">
         </li>
-        <hr>
         {% endfor %}
     </ul>
 </body>

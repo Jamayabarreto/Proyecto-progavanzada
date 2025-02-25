@@ -77,10 +77,14 @@ def update_magical_girl(id):
 
     return jsonify({'message': 'Chica mágica actualizada'}), 200
 
-@app.route('/magical_girls/state/<status>', methods=['GET'])
-def filter_by_status(status):
-    girls = MagicalGirl.query.filter_by(status=status).all()
-    return jsonify([girl.to_dict() for girl in girls])
+@app.route('/magical_girls/state', methods=['GET'])
+def filter_by_status():
+    status = request.args.get('estado')
+    if status:
+        girls = MagicalGirl.query.filter_by(status=status).all()
+    else:
+        girls = MagicalGirl.query.all()
+    return render_template('index.html', girls=girls)
 
 if __name__ == '__main__':
     app.run(debug=True)
