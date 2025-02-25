@@ -93,8 +93,6 @@ def filter_by_status():
 
 
 
-
-
 # Ruta para obtener los distintos estados
 @app.route('/magical_girls/statuses', methods=['GET'])
 def get_statuses():

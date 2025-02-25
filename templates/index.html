@@ -12,19 +12,15 @@
             <option value="">Todas</option>
             <option value="activa">Activa</option>
             <option value="desaparecida">Desaparecida</option>
-            <option value="rescatada">Rescatada</option>
+            <option value="rescatada por la Ley de los Ciclos">Rescatada por la Ley de los Ciclos</option>
         </select>
         <button type="submit">Filtrar</button>
     </form>
     <ul>
         {% for girl in girls %}
         <li>
-            <strong>{{ girl.name }}</strong><br>
-            Edad: {{ girl.age }}<br>
-            Ciudad: {{ girl.city }}<br>
+            <strong><a href="/magical_girls/{{ girl.id }}">{{ girl.name }}</a></strong><br>
             Estado: {{ girl.status }}<br>
-            Fecha de Contrato: {{ girl.contract_date }}<br>
-            Raza: {{ girl.race }}<br>
             <img src="{{ girl.photo_url }}" alt="Foto de {{ girl.name }}" width="100">
         </li>
         {% endfor %}
