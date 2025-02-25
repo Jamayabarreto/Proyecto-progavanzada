@@ -86,5 +86,6 @@ def filter_by_status():
         girls = MagicalGirl.query.all()
     return render_template('index.html', girls=girls)
 
+
 if __name__ == '__main__':
     app.run(debug=True)
