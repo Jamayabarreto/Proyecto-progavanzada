@@ -77,14 +77,30 @@ def update_magical_girl(id):
 
     return jsonify({'message': 'Chica mágica actualizada'}), 200
 
+# Ruta para filtrar por estado
 @app.route('/magical_girls/state', methods=['GET'])
 def filter_by_status():
     status = request.args.get('estado')
-    if status:
-        girls = MagicalGirl.query.filter_by(status=status).all()
+    print(f"Estado recibido: {status}")  # Depuración
+    if status and status != "*":
+        girls = MagicalGirl.query.filter(db.func.lower(MagicalGirl.status) == status.lower()).all()
+        print(f"Chicas encontradas: {[girl.name for girl in girls]}")  # Depuración
+        if not girls:
+            print("No se encontraron chicas con ese estado.")
     else:
         girls = MagicalGirl.query.all()
     return render_template('index.html', girls=girls)
+
+
+
+
+
+# Ruta para obtener los distintos estados
+@app.route('/magical_girls/statuses', methods=['GET'])
+def get_statuses():
+    statuses = db.session.query(MagicalGirl.status).distinct().all()
+    statuses = [status[0] for status in statuses]  # Extraer los valores de status del resultado
+    return jsonify(statuses)
 
 
 if __name__ == '__main__':
