@@ -7,12 +7,11 @@
 </head>
 <body>
 
-    <img src="{{ url_for('static', filename='images/premier-logo.png') }}" alt="Premier League Logo" class="logo-container logo-left">
-    <img src="{{ url_for('static', filename='images/premier-logo.png') }}" alt="Premier League Logo" class="logo-container logo-right">
+    <img src="{{ url_for('static', filename='images/premier-logo.jpg') }}" alt="Premier League Logo" class="logo-container logo-left">
+    <img src="{{ url_for('static', filename='images/premier-logo.jpg') }}" alt="Premier League Logo" class="logo-container logo-right">
 
     <nav class="navbar">
-        <a href="index.html">Inicio</a>
-        <a href="profile.html">Perfil</a>
+        <a href="{{ url_for('index') }}">Inicio</a>
     </nav>
    
     <div class="container">
@@ -34,6 +33,26 @@
             <hr>
             {% endfor %}
         </ul>
+
+        {% if girl.name == "Jean-Philippe Mateta" %}
+        <audio id="mateta-song" src="{{ url_for('static', filename='audio/mateta-song.mp3') }}" autoplay></audio>
+        <script>
+            window.onload = function() {
+                var audio = document.getElementById("mateta-song");
+                audio.play();
+            };
+        </script>
+        {% endif %}
+
+        {% if girl.name == "ChipiChipi" %}
+        <audio id="ChipiChipi-song" src="{{ url_for('static', filename='audio/ChipiChipi-song.mp3') }}" autoplay></audio>
+        <script>
+            window.onload = function() {
+                var audio = document.getElementById("ChipiChipi-song");
+                audio.play();
+            };
+        </script>
+        {% endif %}
     </div>
 
 </body>

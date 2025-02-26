@@ -49,7 +49,9 @@ def get_magical_girls():
 @app.route('/magical_girls/<int:id>', methods=['GET'])
 def get_magical_girl(id):
     girl = MagicalGirl.query.get_or_404(id)
+    print(girl.id)  # Debugging statement
     return render_template('profile.html', girl=girl)
+
 
 @app.route('/magical_girls/<int:id>', methods=['DELETE'])
 def delete_magical_girl(id):

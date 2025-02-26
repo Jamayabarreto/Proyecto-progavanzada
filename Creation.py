@@ -13,41 +13,44 @@ with app.app_context():
     # Lista de chicas mágicas a crear
     girls = [
         {
-            "name": "Cole Palmer",
-            "age": 22,
-            "city": "Manchester",
-            "status": "activa",
-            "contract_date": "2025-01-15",
-            "race": "Leon",
-            "photo_url": "https://uk1.sportal365images.com/process/smp-image-api/livescore.com/23012024/b4a32bbf-2e73-4f49-8a49-1dd5d57b7b75.jpg"
-        },
-        {
-            "name": "Bryan Mbeumo",
-            "age": 27,
-            "city": "Avallon",
-            "status": "rescatada por la Ley de los Ciclos",
-            "contract_date": "2021-08-21",
-            "race": "Abeja",
-            "photo_url": "https://static01.nyt.com/athletic/uploads/wp/2023/12/07093935/bryan-mbeumo-scaled-e1701962367529.jpeg"
-        },
-        {
-            "name": "Matheus Cunha",
-            "age": 25,
-            "city": "João Pessoa",
-            "status": "activa",
-            "contract_date": "2024-06-02",
-            "race": "Lobo",
-            "photo_url": "https://icdn.caughtoffside.com/wp-content/uploads/2025/02/tottenham-wolves-matheus-cunha-1536x1078.jpg"
-        },
-        {
-            "name": "Ollie Watkins",
-            "age": 26,
-            "city": "Exeter",
-            "status": "Desaparecida",
-            "contract_date": "2020-04-11",
-            "race": "Leon",
-            "photo_url": "https://mercatofootanglais.com/wp-content/uploads/2023/04/ollie-watkins-scaled.jpg"
-        }
+    "name": "Mohamed Salah",
+    "age": 32,
+    "city": "Nagrig",
+    "status": "Activa",
+    "contract_date": "2017-07-01",
+    "race": "Faraon",
+    "photo_url": "https://vignette.wikia.nocookie.net/liverpoolfc/images/0/05/MSalah2018.jpeg/revision/latest?cb=20180809023000"
+    },
+
+    {
+    "name": "Trent Alexander-Arnold",
+    "age": 26,
+    "city": "Liverpool",
+    "status": "Desaparecida",
+    "contract_date": "2016-07-01",
+    "race": "Dragon",
+    "photo_url": "https://firstsportz.com/wp-content/uploads/2020/06/1196090853-2048x1415.jpg"
+    },
+
+    {
+    "name": "Luis Díaz",
+    "age": 28,
+    "city": "Barrancas",
+    "status": "Desaparecida",
+    "contract_date": "2022-01-30",
+    "race": "Dragon",
+    "photo_url": "https://www.thickaccent.com/wp-content/uploads/2022/01/Screenshot-2022-01-30-at-12.11.35-PM-957x1024.jpg.webp"
+    },
+
+    {
+    "name": "Jean-Philippe Mateta",
+    "age": 27,
+    "city": "Sevran",
+    "status": "rescatada por la Ley de los Ciclos",
+    "contract_date": "2021-03-21",
+    "race": "Aguila",
+    "photo_url": "https://static01.nyt.com/athletic/uploads/wp/2024/01/03112113/GettyImages-1874247973-scaled.jpg"
+    }   
     ]
 
     # Crear y añadir cada chica mágica a la base de datos

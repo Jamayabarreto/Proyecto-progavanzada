@@ -7,13 +7,11 @@
 </head>
 <body>
 
-   
     <img src="{{ url_for('static', filename='images/premier-logo.jpg') }}" alt="Premier League Logo" class="logo-container logo-left">
     <img src="{{ url_for('static', filename='images/premier-logo.jpg') }}" alt="Premier League Logo" class="logo-container logo-right">
 
     <nav class="navbar">
-        <a href="index.html">Inicio</a>
-        <a href="profile.html">Perfil</a>
+        <a href="{{ url_for('index') }}">Inicio</a>
     </nav>
 
     <div class="container">
@@ -32,7 +30,7 @@
         <ul>
             {% for girl in girls %}
             <li>
-                <strong><a href="/magical_girls/{{ girl.id }}">{{ girl.name }}</a></strong><br>
+                <strong><a href="{{ url_for('get_magical_girl', id=girl.id) }}">{{ girl.name }}</a></strong><br>
                 Estado: {{ girl.status }}<br>
                 <img src="{{ girl.photo_url }}" alt="Foto de {{ girl.name }}" width="100">
             </li>
@@ -42,4 +40,3 @@
 
 </body>
 </html>
-
