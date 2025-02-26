@@ -123,8 +123,8 @@ li {
 
 
 .profile-photo {
-    width: 300px; /* Ajusta el tamaño según tu preferencia */
-    height: 300px; /* Ajusta el tamaño según tu preferencia */
-    border-radius: 50%;
+    width: 500px; /* Ajusta el tamaño según tu preferencia */
+    height: 500px; /* Ajusta el tamaño según tu preferencia */
+    border-radius: 0; /* Hace que la imagen sea cuadrada */
     margin-bottom: 20px; /* Espacio inferior para separar del texto */
 }
