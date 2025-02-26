@@ -12,45 +12,43 @@ with app.app_context():
 
     # Lista de chicas mágicas a crear
     girls = [
-        {
-    "name": "Mohamed Salah",
-    "age": 32,
-    "city": "Nagrig",
-    "status": "Activa",
-    "contract_date": "2017-07-01",
-    "race": "Faraon",
-    "photo_url": "https://vignette.wikia.nocookie.net/liverpoolfc/images/0/05/MSalah2018.jpeg/revision/latest?cb=20180809023000"
-    },
-
-    {
-    "name": "Trent Alexander-Arnold",
-    "age": 26,
-    "city": "Liverpool",
-    "status": "Desaparecida",
-    "contract_date": "2016-07-01",
-    "race": "Dragon",
-    "photo_url": "https://firstsportz.com/wp-content/uploads/2020/06/1196090853-2048x1415.jpg"
-    },
-
-    {
-    "name": "Luis Díaz",
+{
+    "name": "Bruno Fernandes",
+    "age": 30,
+    "city": "Maia",
+    "status": "Rescatada por la lay de los ciclos",
+    "contract_date": "2020-01-30",
+    "race": "Demonio",
+    "photo_url": "https://images.daznservices.com/di/library/GOAL/2c/20/bruno-fernandes-manchester-united-2020-21_1hyly9p0a6i8n1xwj51slqmgam.jpg?t=1020514389&w={width}&quality=80"
+},
+{
+    "name": "James Maddison",
     "age": 28,
-    "city": "Barrancas",
-    "status": "Desaparecida",
-    "contract_date": "2022-01-30",
-    "race": "Dragon",
-    "photo_url": "https://www.thickaccent.com/wp-content/uploads/2022/01/Screenshot-2022-01-30-at-12.11.35-PM-957x1024.jpg.webp"
-    },
-
-    {
-    "name": "Jean-Philippe Mateta",
+    "city": "Coventry",
+    "status": "Activa",
+    "contract_date": "2018-06-20",
+    "race": "Gallinazo",
+    "photo_url": "https://i2-prod.dailystar.co.uk/incoming/article31031371.ece/ALTERNATES/s1200/1_AFC-Bournemouth-v-Tottenham-Hotspur-Premier-League.jpg"
+},
+{
+    "name": "Kaoru Mitoma",
     "age": 27,
-    "city": "Sevran",
-    "status": "rescatada por la Ley de los Ciclos",
-    "contract_date": "2021-03-21",
-    "race": "Aguila",
-    "photo_url": "https://static01.nyt.com/athletic/uploads/wp/2024/01/03112113/GettyImages-1874247973-scaled.jpg"
-    }   
+    "city": "Kawasaki",
+    "status": "Activa",
+    "contract_date": "2021-08-10",
+    "race": "Gaviota",
+    "photo_url": "https://uk1.sportal365images.com/process/smp-image-api/livescore.com/11112022/a68c0047-6ecc-4991-8eae-26b51c5d7bfa.jpg"
+},
+{
+    "name": "Son Heung-min",
+    "age": 32,
+    "city": "Chuncheon",
+    "status": "desaparecida",
+    "contract_date": "2015-08-28",
+    "race": "Gallinazo",
+    "photo_url": "https://d2x51gyc4ptf2q.cloudfront.net/content/uploads/2023/01/17151019/Son-spurs.jpg"
+}
+
     ]
 
     # Crear y añadir cada chica mágica a la base de datos

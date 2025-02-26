@@ -5,7 +5,7 @@
     <title>Perfil de Chica Mágica</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
+<body class="profile-body">
 
     <img src="{{ url_for('static', filename='images/premier-logo.jpg') }}" alt="Premier League Logo" class="logo-container logo-left">
     <img src="{{ url_for('static', filename='images/premier-logo.jpg') }}" alt="Premier League Logo" class="logo-container logo-right">
@@ -16,7 +16,7 @@
    
     <div class="container">
         <h1>Perfil de {{ girl.name }}</h1>
-        <img src="{{ girl.photo_url }}" alt="Foto de {{ girl.name }}" width="100"><br>
+        <img src="{{ girl.photo_url }}" alt="Foto de {{ girl.name }}" class="profile-photo"><br>
         <strong>Edad:</strong> {{ girl.age }}<br>
         <strong>Ciudad:</strong> {{ girl.city }}<br>
         <strong>Estado:</strong> {{ girl.status }}<br>

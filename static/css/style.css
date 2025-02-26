@@ -12,6 +12,13 @@ body {
     position: relative;
 }
 
+.profile-body {
+    background-color: #37003c; /* Asegúrate de tener el mismo fondo */
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
 .navbar {
     background-color: #e90052;
     padding: 15px;
@@ -40,83 +47,61 @@ body {
 
 .container {
     width: 80%;
-    margin-top: 80px;
+    margin-top: 200px;
     padding: 20px;
     text-align: center;
 }
 
-.card {
-    background: #e90052;
-    color: white;
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.player-card {
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    padding: 22px; /* Originalmente 15px, incrementado en 10% */
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 22px; /* Originalmente 15px, incrementado en 10% */
+    width: 150%; /* Originalmente 100%, incrementado en 10% */
+    max-width: 550px; /* Originalmente 400px, incrementado en 10% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
-.card img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.card:hover {
+.player-card:hover {
     transform: scale(1.05);
 }
 
-.button {
-    background: #ff007f;
+.player-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.player-info {
+    text-align: left;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.button:hover {
-    background: #ff3399;
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    font-size: 30px; /* Ajustado para aumentar el tamaño de la letra */
 }
 
 .logo-container {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100px;
-}
-
-.logo-left {
-    left: 20px;
-}
-
-.logo-right {
-    right: 20px;
-}
-
-
-.container img {
-    border-radius: 10px;
-    width: 150px;
-    height: auto;
-    margin-bottom: 15px;
+    top: 150px; /* Ajustado para mover el logo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
 }
 
 h1, h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 50px;
+    margin-top: 150px; /* Ajusta este valor para separar el título del logo */
+    margin-bottom: 150px;
 }
+
 
 ul {
     list-style-type: none;
@@ -126,8 +111,20 @@ ul {
 li {
     background: rgba(255, 255, 255, 0.1);
     padding: 10px;
-    margin: 5px 0;
+    margin: 10px 0;
     border-radius: 5px;
 }
 
+.search-container {
+    margin-top: 150px; /* Ajustado para mover el filtro de búsqueda */
+    margin-bottom: 150px; /* Agregado para separar el filtro de los rectángulos */
+    text-align: center;
+}
 
+
+.profile-photo {
+    width: 300px; /* Ajusta el tamaño según tu preferencia */
+    height: 300px; /* Ajusta el tamaño según tu preferencia */
+    border-radius: 50%;
+    margin-bottom: 20px; /* Espacio inferior para separar del texto */
+}

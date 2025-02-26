@@ -5,38 +5,41 @@
     <title>Lista de Chicas Mágicas</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>
-
+<body>  
     <img src="{{ url_for('static', filename='images/premier-logo.jpg') }}" alt="Premier League Logo" class="logo-container logo-left">
     <img src="{{ url_for('static', filename='images/premier-logo.jpg') }}" alt="Premier League Logo" class="logo-container logo-right">
 
     <nav class="navbar">
-        <a href="{{ url_for('index') }}">Inicio</a>
+        <a href="index.html">Inicio</a>
+        <a href="profile.html">Perfil</a>
     </nav>
 
     <div class="container">
         <h1>Lista de Chicas Mágicas</h1>
-        <form method="get" action="/magical_girls/state">
-            <label for="estado">Filtrar por estado:</label>
-            <select id="estado" name="estado">
-                <option value="">Todas</option>
-                <option value="activa">Activa</option>
-                <option value="desaparecida">Desaparecida</option>
-                <option value="rescatada por la Ley de los Ciclos">Rescatada por la Ley de los Ciclos</option>
-            </select>
-            <button type="submit">Filtrar</button>
-        </form>
+        <div class="search-container">
+            <form method="get" action="/magical_girls/state">
+                <label for="estado">Filtrar por estado:</label>
+                <select id="estado" name="estado">
+                    <option value="">Todas</option>
+                    <option value="activa">Activa</option>
+                    <option value="desaparecida">Desaparecida</option>
+                    <option value="rescatada por la Ley de los Ciclos">Rescatada por la Ley de los Ciclos</option>
+                </select>
+                <button type="submit">Filtrar</button>
+            </form>
+        </div>
 
-        <ul>
+        <div class="players-grid">
             {% for girl in girls %}
-            <li>
-                <strong><a href="{{ url_for('get_magical_girl', id=girl.id) }}">{{ girl.name }}</a></strong><br>
-                Estado: {{ girl.status }}<br>
-                <img src="{{ girl.photo_url }}" alt="Foto de {{ girl.name }}" width="100">
-            </li>
+            <div class="player-card">
+                <img src="{{ girl.photo_url }}" alt="Foto de {{ girl.name }}">
+                <div class="player-info">
+                    <strong><a href="/magical_girls/{{ girl.id }}">{{ girl.name }}</a></strong><br>
+                    Estado: {{ girl.status }}
+                </div>
+            </div>
             {% endfor %}
-        </ul>
+        </div>
     </div>
-
 </body>
 </html>
